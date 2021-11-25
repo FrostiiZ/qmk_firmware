@@ -101,6 +101,10 @@ void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
 	if (IS_HOST_LED_ON(USB_LED_CAPS_LOCK)) {
       RGB_MATRIX_INDICATOR_SET_COLOR(3, 255, 255, 255); //capslock key
 
+      RGB_MATRIX_INDICATOR_SET_COLOR(2, 255, 255, 255); // tab key
+      RGB_MATRIX_INDICATOR_SET_COLOR(4, 255, 255, 255); // L_shift key
+      RGB_MATRIX_INDICATOR_SET_COLOR(9, 255, 255, 255); // A key
+
       RGB_MATRIX_INDICATOR_SET_COLOR(68, 255, 255, 255); // left-side LEDs
       RGB_MATRIX_INDICATOR_SET_COLOR(71, 255, 255, 255);
       RGB_MATRIX_INDICATOR_SET_COLOR(74, 255, 255, 255);
@@ -123,6 +127,11 @@ void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
   switch(get_highest_layer(layer_state)){  // special handling per layer
       case 1:  //layer one
           RGB_MATRIX_INDICATOR_SET_COLOR(55, 255, 255, 255); //FN key
+
+          RGB_MATRIX_INDICATOR_SET_COLOR(49, 255, 255, 255); //Alt_R
+          RGB_MATRIX_INDICATOR_SET_COLOR(65, 255, 255, 255); //Ct_R
+          RGB_MATRIX_INDICATOR_SET_COLOR(54, 255, 255, 255); // /:
+          RGB_MATRIX_INDICATOR_SET_COLOR(60, 255, 255, 255); // !§
           break;
       default:
           break;
